@@ -2,37 +2,27 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Rep Builder</title>
+	<title>FAC Overflow Search</title>
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<div class="container">
-		<div class="intro">
-			<div class="left stack-image"></div>
-			<div class="explanation">
-				<h1>StackOverflow Reputation Builder</h1>
-				<p>This app lets you search by topic for unanswered questions on Stack Overflow to help you build your reputation.  Find unanswered questions for a topic you know about, write quality answers, and watch your reputation go up.</p>
-				<p>Sometimes, you also need some inspiration. This page also lets you search for the top answerers for a tag. If you want to rise to the top ranks for a topic, see how many reputation points you'll need to aim for!</p>
-			</div>
-		</div>
-		<hr>
-		<div class="stack">
-			<h3>Get Unanswered Questions</h3>
-			<p>Find unanswered questions by tag. For multiple tags, use a semi-colon to separate.</p>
-			<form id="form-unanswered">
-				<input type="text" placeholder='e.g., "HTML" or "HTML;CSS"' name="tags" size="30" autofocus required>
-				<input type="submit" value="Submit">
-			</form>
-			<h3>View the Top Answerers for a Tag</h3>
-			<form id="form-answerers">
-				<input type="text" placeholder="e.g., HTTP requests" name="tags" size="30" required disabled>
-				<input type="submit" value="Submit" disabled>
-			</form>
-		</div>
-		<div class="results-container">
-			<div id="results-summary"></div>
-			<div id="results-body"></div>
-		</div>
+	<div class="header">
+	  <svg class="icon" viewBox="0 0 16 16" width="32px" height="32px" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414" fill="white">
+	    <path d="M12.658 14.577v-4.27h1.423V16H1.23v-5.693h1.42v4.27h10.006zm-8.583-1.423h7.16V11.73h-7.16v1.424zm.173-3.235l6.987 1.46.3-1.38L4.55 8.54l-.302 1.38zm.906-3.37l6.47 3.02.602-1.3-6.47-3.02-.602 1.29zm1.81-3.19l5.478 4.57.906-1.08L7.87 2.28l-.9 1.078zM10.502 0L9.338.863l4.27 5.735 1.164-.862L10.5 0z"></path>
+		</svg>
+	  <form class="form" id="js-form">
+	    <input class="form__input" type="text" placeholder="css" required autofocus />
+	    <select class="form__input" name="choose-option">
+	      <option value="unanswered" selected>Unanswered questions</option>
+	      <option value="top-answerers">Top answerers</option>
+	    </select>
+	    <button class="form__input form__input--btn">Submit</button>
+	  </form>
 	</div>
+	<div class="results-container">
+	  <ul class="results" id="js-output">
+	  </ul>
+	</div>
+	<script src="./js/index.js"></script>
 </body>
 </html>

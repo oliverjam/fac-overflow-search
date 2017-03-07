@@ -1,0 +1,26 @@
+{
+  "name": "fac-overflow-search",
+  "version": "1.0.0",
+  "description": "Search Stack Overflow for unanswered questions and top answerers",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-sync start --no-notify --server --files '*.html, **/*.css, **/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliverjam/workshop-client-side-design.git"
+  },
+  "author": "oliverjam, piotrberebecki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oliverjam/workshop-client-side-design/issues"
+  },
+  "homepage": "https://github.com/oliverjam/workshop-client-side-design#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8"
+  }
+}
